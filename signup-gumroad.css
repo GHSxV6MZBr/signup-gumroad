@@ -1,0 +1,170 @@
+html {
+    font-family: sans-serif;
+    font-size: 12px;
+    background-color: #f4f4f0;
+}
+body {
+    margin: 0;
+}
+main {
+    display: flex;
+    height: 100vh;
+}
+.form {
+    box-sizing: border-box;
+    width: 60vw;
+    overflow-y: auto;
+    padding: 4.8em 4.7em;
+}
+.form__header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    background-image: url(gumroad-logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.logo_small {
+    display: block;
+    width: calc(16px/.14);
+    height: 16px;
+}
+.form__link {
+    font-size: 1.3rem;
+    color: #000;
+}
+.form__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.form__header-one {
+    font-size: 3em;
+    font-weight: 400;
+    line-height: 1.4em;
+}
+.form__header-one_margin {
+    margin: 3em 0 2em;
+}
+.form__button-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-top: 4em;
+}
+.button {
+    flex: 1 1 auto;
+    font-size: 1.3em;
+    font-weight: 100;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 0 0.8em;
+    border: 1px solid #000;
+    border-radius: 4px;
+    transition: all 0.1s ease-out;
+}
+.button:hover {
+    transform: translate(-0.2em, -0.2em);
+    box-shadow: 0.3em 0.3em #000;
+}
+.button__layout {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+.button_facebook {
+    background-color: #4267b2;
+}
+.button_twitter {
+    background-color: #4a99e9;
+}
+.form__line-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.form__line {
+    font-size: 1.2em;
+    text-align: center;
+}
+.form__line:before, .form__line:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 45%;
+    width: 45%;
+    height: 1px;
+    background-color: #000;
+}
+.form__line:before {
+    left: 0;
+}
+.form__line:after {
+    right: 0;
+}
+.form__line_margin {
+    margin: 2.5em 0;
+}
+.form__label {
+    font-size: 1.3em;
+    font-weight: 900;
+}
+.form__label_margin {
+    margin: 0.5em 0;
+}
+.form__input {
+    font-size: 1.2em;
+    padding: 1.2em 1em 0.8em;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+.form__input:focus-within {
+    outline: 2px solid #ff90e8;
+}
+.form__input_margin {
+    margin-bottom: 2.5em;
+}
+.button__create-account {
+    background-color: #000;
+}
+.button__create-account:hover {
+    color: #000;
+    background-color: #ff90e8;
+}
+.button__create-account_margin {
+    margin-bottom: 2em;
+}
+.paragraph {
+    font-size: 1.3em;
+}
+.background-image {
+    width: 40vw;
+    background-image: url(gumroad-img.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .form {
+        width: 100vw;
+        padding: 5.7em 0.7em 0;
+    }
+    .form__header-one {
+        display: none;
+    }
+    .background-image {
+        display: none;
+    }
+}
+@media (max-width: 532px) {
+    .form {
+        padding-right: 1.5em;
+        padding-left: 1.5em;
+    }
+    .form__button-wrapper {
+        flex-direction: column;
+    }
+}
